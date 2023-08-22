@@ -106,7 +106,7 @@ class AdvancedSearchQuery {
    */
   public function shouldRecurse(Request $request) {
     if ($request->query->has($this->recurseParameter)) {
-      $recurse_param = $request->query->get($this->recurseParameter);
+      $recurse_param = $request->query->all()[$this->recurseParameter];
       return filter_var($recurse_param, FILTER_VALIDATE_BOOLEAN);
     }
     return FALSE;

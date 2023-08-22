@@ -3,6 +3,8 @@ advanced.search.admin:
     js/advanced_search.admin.js: {}
   dependencies:
     - core/drupal.tabledrag
+    - core/jquery
+    - core/once
 
 advanced.search.form:
   js:
@@ -10,8 +12,14 @@ advanced.search.form:
   css:
     component:
       css/advanced_search.form.css: {}
+  dependencies:
+    - core/jquery
+    - core/once
 
 advanced.search.pager:
   css:
     component:
       css/advanced_search.pager.css: {}
+  dependencies:
+    - core/jquery
+    - core/once

@@ -5,6 +5,7 @@ description: "Creates an Advanced Search block and other enhancements to search.
 type: module
 package: Islandora
 core_version_requirement: ^8.8 || ^9 || ^10
+version: 3.0.0
 dependencies:
   - drupal:facets
   - drupal:facets_summary
