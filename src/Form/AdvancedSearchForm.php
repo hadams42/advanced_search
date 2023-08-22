@@ -238,10 +238,10 @@ class AdvancedSearchForm extends FormBase {
    *   forms block.
    */
   protected function getRouteName(FormStateInterface $form_state) {
-    $view = $form_state->all()['view'];
-    $display = $form_state->all()['display'];
+    $view = $form_state->get('view');
+    $display = $form_state->get('display');
     $display_handlers = new DisplayPluginCollection($view->getExecutable(), Views::pluginManager('display'));
-    $display_handler = $display_handlers->all()[$display['id']];
+    $display_handler = $display_handlers->get($display['id']);
     if ($display_handler instanceof PathPluginBase) {
       return $display_handler->getRouteName();
     }

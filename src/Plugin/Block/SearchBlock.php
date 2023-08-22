@@ -46,7 +46,7 @@ class SearchBlock extends BlockBase {
       $views = \Drupal::EntityTypeManager()->getStorage('view')->loadMultiple();
       $options = [];
       foreach ($views as $view_name => $view) {
-        $displays = $view->all()["display"];
+        $displays = $view->get("display");
         foreach ($displays as $display) {
           if ($display['display_plugin'] === "page") {
             $options["view.$view_name" . "." . $display['id']] = "view.$view_name" . "." . $display['id'];
