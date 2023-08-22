@@ -15,7 +15,7 @@ advanced.search.form:
   dependencies:
     - core/jquery
     - core/once
-
+    
 advanced.search.pager:
   css:
     component:
